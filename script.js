@@ -18,3 +18,9 @@ function renderMusic(music) {
     document.querySelector('#music-bar').appendChild(artistSlide)
 }
 renderMusic()
+
+document.querySelector('.add-music-form').addEventListener('submit', addMusic)
+
+function addMusic(e) {
+    e.preventDefault()
+}
