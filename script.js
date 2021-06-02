@@ -17,10 +17,8 @@ function renderMusic(music) {
     artistSlide.append(artistName, albumImage, albumTitle, track)
     document.querySelector('#music-bar').appendChild(artistSlide)
 }
-renderMusic()
 
-document.querySelector('.add-music-form').addEventListener('submit', addMusic)
 
-function addMusic(e) {
+document.querySelector('.add-music-form').addEventListener('submit', (e) => {
     e.preventDefault()
-}
+})
