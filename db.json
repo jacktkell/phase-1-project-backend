@@ -16,9 +16,9 @@
       },
       {
         "id": 2,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
+        "artist": "Foo Fighters",
+        "album": "Medicine at Midnight",
+        "album_art": "https://media.pitchfork.com/photos/5ff365a123155174547abec2/1:1/w_320/Foo-Fighters.jpg",
         "tracklist": [
           "track 1",
           "track 2",
@@ -30,23 +30,24 @@
       },
       {
         "id": 3,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
+        "artist": "The Beatles",
+        "album": "Help!",
+        "album_art": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Help%21_%28The_Beatles_album_-_cover_art%29.jpg/220px-Help%21_%28The_Beatles_album_-_cover_art%29.jpg",
         "tracklist": [
           "track 1",
           "track 2",
           "track 3",
           "track 4",
           "track 5",
-          "track 6"
+          "track 6",
+          "track 7"
         ]
       },
       {
         "id": 4,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
+        "artist": "Maroon 5",
+        "album": "V",
+        "album_art": "https://upload.wikimedia.org/wikipedia/en/5/53/Maroon_5_-_V_%28Official_Album_Cover%29.png",
         "tracklist": [
           "track 1",
           "track 2",
@@ -58,79 +59,9 @@
       },
       {
         "id": 5,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
-        "tracklist": [
-          "track 1",
-          "track 2",
-          "track 3",
-          "track 4",
-          "track 5",
-          "track 6"
-        ]
-      },
-      {
-        "id": 6,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
-        "tracklist": [
-          "track 1",
-          "track 2",
-          "track 3",
-          "track 4",
-          "track 5",
-          "track 6"
-        ]
-      },
-      {
-        "id": 7,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
-        "tracklist": [
-          "track 1",
-          "track 2",
-          "track 3",
-          "track 4",
-          "track 5",
-          "track 6"
-        ]
-      },
-      {
-        "id": 8,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
-        "tracklist": [
-          "track 1",
-          "track 2",
-          "track 3",
-          "track 4",
-          "track 5",
-          "track 6"
-        ]
-      },
-      {
-        "id": 9,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
-        "tracklist": [
-          "track 1",
-          "track 2",
-          "track 3",
-          "track 4",
-          "track 5",
-          "track 6"
-        ]
-      },
-      {
-        "id": 10,
-        "artist": "artist name",
-        "album": "album name",
-        "album_art": "art url",
+        "artist": "J. Cole",
+        "album": "2014 Forest Hills Drive",
+        "album_art": "https://upload.wikimedia.org/wikipedia/en/2/2a/2014ForestHillsDrive.jpg",
         "tracklist": [
           "track 1",
           "track 2",
@@ -141,4 +72,4 @@
         ]
       }
     ]
-  }
+}
