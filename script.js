@@ -18,13 +18,15 @@ function renderMusic(music) {
     artistSlide.append(artistName, albumImage, albumTitle, track)
     document.querySelector('#music-bar').appendChild(artistSlide)
 }
-<<<<<<< HEAD
-//renderMusic()
-// test
-=======
->>>>>>> e7b7baa5c8677de6b8248c44ac55439374f3eaa1
+// <<<<<<< HEAD
+// //renderMusic()
+// // test
+// =======
+// >>>>>>> e7b7baa5c8677de6b8248c44ac55439374f3eaa1
 
 
 document.querySelector('.add-music-form').addEventListener('submit', (e) => {
     e.preventDefault()
+    console.log(e.target.name.value)
+
 })
