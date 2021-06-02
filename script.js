@@ -24,7 +24,7 @@ function handleNewMusic() {
     e.preventDefault()
 
     const newMusic = {}
-    newMusic.artistName = e.target.name.value
+    newMusic.artist = e.target.name.value
     newMusic.album_art = e.target.image.value
 
     const reqObj = {
