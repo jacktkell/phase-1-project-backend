@@ -5,6 +5,7 @@ fetch("http://localhost:3000/music")
 .then(data => data.forEach(renderMusic))
 
 function renderMusic(music) {
+    console.log(music)
     let artistSlide = document.createElement('span')
     let artistName = document.createElement('h2')
     artistName.innerText = music.artist
@@ -17,7 +18,6 @@ function renderMusic(music) {
     artistSlide.append(artistName, albumImage, albumTitle, track)
     document.querySelector('#music-bar').appendChild(artistSlide)
 }
-
 
 function handleNewMusic() {
     document.querySelector('.add-music-form').addEventListener('submit', (e) => {
