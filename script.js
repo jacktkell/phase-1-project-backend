@@ -3,17 +3,33 @@ fetch("http://localhost:3000/music")
 .then(data => data.forEach(renderMusic))
 
 function renderMusic(music) {
-    console.log(music)
     let artistSlide = document.createElement('span')
+
     let artistName = document.createElement('h2')
     artistName.innerText = music.artist
+
     let albumTitle = document.createElement('h2')
     albumTitle.innerText = music.album
+
     let track = document.createElement('p')
     track.innerText = music.tracklist
+
     let albumImage = document.createElement('img')
     albumImage.src = music.album_art
-    artistSlide.append(artistName, albumImage, albumTitle, track)
+
+    let likes = document.createElement('p')
+    likes.innerText = 0
+    let likesButton = document.createElement('button')
+    likesButton.innerText = "like"
+    likesButton.addEventListener('click', () => {
+      likes.innerText++
+    })
+
+    const form = document.createElement('form')
+    form.innerHTML = "test"
+    
+
+    artistSlide.append(artistName, albumImage, albumTitle, track, likesButton, likes, form)
     document.querySelector('#music-bar').appendChild(artistSlide)
 }
 
@@ -37,3 +53,4 @@ function handleNewMusic() {
     })
 }
 handleNewMusic()
+
