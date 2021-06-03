@@ -3,11 +3,14 @@ img {
 }
 
 span {
-    float:left;
-    margin:10px 10px 0 0;
-    padding:10px 10px;
+    display:table;
+    margin:0 auto;
 }
 
 div {
     text-align: center;
+}
+
+button {
+background-color: transparent;
 }

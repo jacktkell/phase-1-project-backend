@@ -33,7 +33,7 @@ function renderMusic(music) {
   let likes = document.createElement("p");
   likes.innerText = 0;
   let likesButton = document.createElement("button");
-  likesButton.innerText = "like";
+  likesButton.innerText = "❤";
   likesButton.addEventListener("click", () => {
     likes.innerText++;
   });
