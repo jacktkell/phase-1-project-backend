@@ -7,22 +7,6 @@ function renderMusic(music) {
 
   let artistName = document.createElement("h2");
   artistName.innerText = music.artist;
-  // artistName.forEach(() => {
-  //   const form = document.createElement("form");
-  //   form.setAttribute("method", "post");
-  //   form.setAttribute("action", "submit");
-
-  //   const review = document.createElement("input");
-  //   review.setAttribute("type", "text");
-  //   review.setAttribute("name", "Review");
-  //   review.setAttribute("placeholder", "Leave a review");
-
-  //   const submit = document.createElement("input");
-  //   submit.setAttribute("type", "submit");
-  //   submit.setAttribute("value", "Submit");
-
-  //   form.append(review, submit);
-  // });
 
   let albumTitle = document.createElement("h2");
   albumTitle.innerText = music.album;
@@ -38,12 +22,21 @@ function renderMusic(music) {
     likes.innerText++;
   });
 
+  let deleteButton = document.createElement('button')
+  deleteButton.innerText = "Delete"
+  deleteButton.addEventListener("click", () => {
+    artistSlide.remove()
+    deleteMusic(music.id)
+  })
+    
+
   artistSlide.append(
     artistName,
     albumImage,
     albumTitle,
     likesButton,
     likes,
+    deleteButton
   );
   document.querySelector("#music-bar").appendChild(artistSlide);
 }
@@ -69,3 +62,13 @@ function handleNewMusic() {
   });
 }
 handleNewMusic();
+
+function deleteMusic (id) {
+  fetch(`http://localhost:3000/music/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .catch(error => console.error("Error:", error))
+}

@@ -1,12 +1,6 @@
 {
   "music": [
     {
-      "id": 1,
-      "artist": "The Killers",
-      "album": "Mr Brightside",
-      "album_art": "https://i1.sndcdn.com/artworks-000242900241-idaeab-t500x500.jpg"
-    },
-    {
       "id": 2,
       "artist": "Foo Fighters",
       "album": "Medicine at Midnight",
