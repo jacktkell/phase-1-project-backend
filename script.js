@@ -1,56 +1,70 @@
 fetch("http://localhost:3000/music")
-.then(r => r.json())
-.then(data => data.forEach(renderMusic))
+  .then((r) => r.json())
+  .then((data) => data.forEach(renderMusic));
 
 function renderMusic(music) {
-    let artistSlide = document.createElement('span')
+  let artistSlide = document.createElement("span");
 
-    let artistName = document.createElement('h2')
-    artistName.innerText = music.artist
+  let artistName = document.createElement("h2");
+  artistName.innerText = music.artist;
+  // artistName.forEach(() => {
+  //   const form = document.createElement("form");
+  //   form.setAttribute("method", "post");
+  //   form.setAttribute("action", "submit");
 
-    let albumTitle = document.createElement('h2')
-    albumTitle.innerText = music.album
+  //   const review = document.createElement("input");
+  //   review.setAttribute("type", "text");
+  //   review.setAttribute("name", "Review");
+  //   review.setAttribute("placeholder", "Leave a review");
 
-    let track = document.createElement('p')
-    track.innerText = music.tracklist
+  //   const submit = document.createElement("input");
+  //   submit.setAttribute("type", "submit");
+  //   submit.setAttribute("value", "Submit");
 
-    let albumImage = document.createElement('img')
-    albumImage.src = music.album_art
+  //   form.append(review, submit);
+  // });
 
-    let likes = document.createElement('p')
-    likes.innerText = 0
-    let likesButton = document.createElement('button')
-    likesButton.innerText = "like"
-    likesButton.addEventListener('click', () => {
-      likes.innerText++
-    })
+  let albumTitle = document.createElement("h2");
+  albumTitle.innerText = music.album;
 
-    const form = document.createElement('form')
-    form.innerHTML = "test"
-    
+  let albumImage = document.createElement("img");
+  albumImage.src = music.album_art;
 
-    artistSlide.append(artistName, albumImage, albumTitle, track, likesButton, likes, form)
-    document.querySelector('#music-bar').appendChild(artistSlide)
+  let likes = document.createElement("p");
+  likes.innerText = 0;
+  let likesButton = document.createElement("button");
+  likesButton.innerText = "like";
+  likesButton.addEventListener("click", () => {
+    likes.innerText++;
+  });
+
+  artistSlide.append(
+    artistName,
+    albumImage,
+    albumTitle,
+    likesButton,
+    likes,
+  );
+  document.querySelector("#music-bar").appendChild(artistSlide);
 }
 
 function handleNewMusic() {
-    document.querySelector('.add-music-form').addEventListener('submit', (e) => {
-    e.preventDefault()
+  document.querySelector(".add-music-form").addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    const newMusic = {}
-    newMusic.artist = e.target.name.value
-    newMusic.album_art = e.target.image.value
+    const newMusic = {};
+    newMusic.artist = e.target.name.value;
+    newMusic.album_art = e.target.image.value;
 
     const reqObj = {
-        headers: {"Content-Type": "application/json"},
-        method: "POST",
-        body: JSON.stringify(newMusic)
-      }
-  
-      fetch("http://localhost:3000/music", reqObj)
-      .then(r => r.json())
-      .then(renderMusic)
-    })
-}
-handleNewMusic()
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+      body: JSON.stringify(newMusic),
+    };
 
+    fetch("http://localhost:3000/music", reqObj)
+      .then((r) => r.json())
+      .then(renderMusic);
+  });
+}
+handleNewMusic();

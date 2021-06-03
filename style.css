@@ -1,0 +1,13 @@
+img {
+    max-height: 200px;
+}
+
+span {
+    float:left;
+    margin:10px 10px 0 0;
+    padding:10px 10px;
+}
+
+div {
+    text-align: center;
+}
