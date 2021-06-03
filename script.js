@@ -55,6 +55,7 @@ function handleNewMusic() {
     const newMusic = {};
     newMusic.artist = e.target.name.value;
     newMusic.album_art = e.target.image.value;
+    newMusic.album = e.target.title.value;
 
     const reqObj = {
       headers: { "Content-Type": "application/json" },
