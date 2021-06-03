@@ -29,6 +29,12 @@
       "album_art": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
       "album": "Dark Side of the Moon",
       "id": 6
+    },
+    {
+      "artist": "The Killers",
+      "album_art": "https://i1.sndcdn.com/artworks-000242900241-idaeab-t500x500.jpg",
+      "album": "Mr. Brightside",
+      "id": 7
     }
   ]
 }
